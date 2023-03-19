@@ -16,7 +16,7 @@ The Logon Tracking App is a simple web application built with FastAPI and SQLite
     
     ```bash
     
-    git clone https://github.com/lubeschanin/logon-app.git
+    git clone https://github.com/lubeschanin/logon_app.git
     cd logon-tracking-app
     ```
     
