@@ -48,8 +48,9 @@ The Logon Tracking App is a simple web application built with FastAPI and SQLite
     ```json
     POST /api/login
     {
-        "client_name": "Client1",
-        "server_name": "Server1"
+        "clientname": "string",
+        "servername": "string",
+        "time": "string"
     }
     ```
     
@@ -58,8 +59,9 @@ The Logon Tracking App is a simple web application built with FastAPI and SQLite
     ```json
     POST /api/logoff
     {
-        "client_name": "Client1",
-        "server_name": "Server1"
+        "clientname": "string",
+        "servername": "string",
+        "time": "string"
     }
     
     ```
