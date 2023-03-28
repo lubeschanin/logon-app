@@ -23,19 +23,21 @@
         <table id="dashboard-table" class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>Clientname</th>
-                    <th>Servername</th>
-                    <th>Letzte Anmeldezeit</th>
-                    <th>Letzte Abmeldezeit</th>
+                    <th>Username</th>
+                    <th>Client</th>
+                    <th>Server</th>
+                    <th>Login Time</th>
+                    <th>Logoff Time</th>
                 </tr>
             </thead>
             <tbody>
-                {% for item in data %}
+                {% for row in data %}
                 <tr>
-                    <td>{{ item.client_name }}</td>
-                    <td>{{ item.server_name }}</td>
-                    <td>{{ item.login_time }}</td>
-                    <td>{{ item.logoff_time }}</td>
+                    <td>{{ row.username }}</td>
+                    <td>{{ row.client_name }}</td>
+                    <td>{{ row.server_name }}</td>
+                    <td>{{ row.login_time }}</td>
+                    <td>{{ row.logoff_time }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/datatables.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Client-Statistiken</h1>
+        <table id="client-table" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Clientname</th>
+                    <th>Anzahl der Logins</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for client, usage in client_usage %}
+                <tr>
+                    <td>{{ client }}</td>
+                    <td>{{ usage }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h1>Server-Statistiken</h1>
+        <table id="server-table" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Servername</th>
+                    <th>Anzahl der Logins</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for server, usage in server_usage %}
+                <tr>
+                    <td>{{ server }}</td>
+                    <td>{{ usage }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/datatables.min.js"></script>
+
+    
+    <script>
+        $(document).ready(function() {
+            $('#client-table').DataTable();
+            $('#server-table').DataTable();
+        });
+    </script>
+</body>
+</html>
